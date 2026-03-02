@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* ── Keyframes ─────────────────────────────────────────── */
+
 @keyframes float {
   0%,
   100% {
@@ -23,23 +25,73 @@
   }
 }
 
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(10px) translateY(-14px) rotate(6deg);
+  }
+  75% {
+    transform: translateX(-8px) translateY(-6px) rotate(-4deg);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ── Tailwind theme tokens ─────────────────────────────── */
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-display: var(--font-syne);
+  --font-sans: var(--font-jakarta);
+  --font-display: var(--font-fraunces);
   --animate-float: float 4s ease-in-out infinite;
   --animate-float-slow: float-slow 6s ease-in-out infinite 1.5s;
   --animate-float-slower: float-slow 8s ease-in-out infinite 3s;
+  --animate-drift: drift 7s ease-in-out infinite;
+  --animate-marquee: marquee 20s linear infinite;
 }
 
+/* ── CSS custom properties ─────────────────────────────── */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f4ee;
+  --foreground: #1a1815;
+
+  /* Brand palette */
+  --indigo: #3d405b;
+  --fern: #588157;
+  --gold: #f2af29;
+  --powder: #92afd7;
+  --iron: #a72608;
 }
+
+/* ── Custom cursor ─────────────────────────────────────── */
+/*
+   SVG data URI with ✨ sparkle emoji.
+   Fully URL-encoded: %3Csvg = <svg, %3E = >, %E2%9C%A8 = ✨
+*/
+*,
+*::before,
+*::after {
+  cursor: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2236%22%20height%3D%2236%22%3E%3Ctext%20y%3D%2230%22%20font-size%3D%2226%22%3E%E2%9C%A8%3C%2Ftext%3E%3C%2Fsvg%3E")
+      14 14,
+    auto;
+}
+
+/* ── Base styles ───────────────────────────────────────── */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-family: var(--font-jakarta), Arial, sans-serif;
 }
