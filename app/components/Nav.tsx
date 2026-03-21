@@ -15,46 +15,48 @@ export default function Nav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-14 py-5 bg-[#f8f4ee]/90 backdrop-blur-sm border-b border-[#3D405B]/10">
-      <Link
-        href="/"
-        className="font-display font-black text-[#3D405B] text-2xl tracking-tight"
-      >
-        LT
-      </Link>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#f8f4ee]/92 backdrop-blur-sm border-b border-[#3D405B]/8">
+      <div className="max-w-[880px] mx-auto px-6 py-4 flex items-center justify-between">
+        <Link
+          href="/"
+          className="font-display font-black text-[#3D405B] text-xl tracking-tight"
+        >
+          Lucklita Theng
+        </Link>
 
-      <div className="flex items-center gap-1">
-        {navLinks.map((link) => {
-          const isActive = link.internal && pathname === link.href;
+        <div className="flex items-center gap-1">
+          {navLinks.map((link) => {
+            const isActive = link.internal && pathname === link.href;
 
-          if (link.internal) {
+            if (link.internal) {
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={`text-sm px-3 py-1.5 rounded-lg transition-colors ${
+                    isActive
+                      ? "font-semibold text-[#3D405B]"
+                      : "font-medium text-[#3D405B]/45 hover:text-[#3D405B]"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            }
+
             return (
-              <Link
+              <a
                 key={link.label}
                 href={link.href}
-                className={`text-sm px-4 py-2 rounded-full transition-all ${
-                  isActive
-                    ? "font-bold text-[#3D405B] bg-[#F2AF29]/20"
-                    : "font-medium text-[#3D405B]/55 hover:text-[#3D405B] hover:bg-[#3D405B]/5"
-                }`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-[#3D405B]/45 hover:text-[#3D405B] transition-colors px-3 py-1.5 rounded-lg"
               >
-                {link.label}
-              </Link>
+                {link.label} ↗
+              </a>
             );
-          }
-
-          return (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-[#3D405B]/55 hover:text-[#3D405B] transition-colors px-4 py-2 rounded-full hover:bg-[#3D405B]/5"
-            >
-              {link.label} ↗
-            </a>
-          );
-        })}
+          })}
+        </div>
       </div>
     </nav>
   );

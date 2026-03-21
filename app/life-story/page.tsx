@@ -39,7 +39,8 @@ export default function LifeStory() {
       <Nav />
 
       {/* ── Header ──────────────────────────────────────── */}
-      <section className="pt-36 pb-16 px-8 md:px-14 max-w-5xl">
+      <section className="pt-36 pb-16 px-6">
+        <div className="max-w-[880px] mx-auto">
         <p className="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#588157] mb-6">
           Life Story
         </p>
@@ -65,10 +66,12 @@ export default function LifeStory() {
             I have to build it. This is the quest so far.
           </p>
         </div>
+        </div>
       </section>
 
       {/* ── Chapters ────────────────────────────────────── */}
-      <section className="px-8 md:px-14 pb-32 max-w-5xl">
+      <section className="px-6 pb-32">
+        <div className="max-w-[880px] mx-auto">
         <div className="space-y-24">
           {chapters.map((chapter, i) => (
             <article key={i} className="relative">
@@ -127,13 +130,14 @@ export default function LifeStory() {
             ✦ &nbsp; still writing.
           </p>
         </div>
+        </div>
       </section>
 
       {/* ── Footer ─────────────────────────────────────── */}
-      <footer className="bg-[#3D405B] px-8 md:px-14 py-12">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <footer className="bg-[#3D405B] px-6 py-12 mt-10">
+        <div className="max-w-[880px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
-            <p className="font-display font-black text-[#f8f4ee] text-xl mb-1 tracking-tight">
+            <p className="font-display font-black text-[#f8f4ee] text-lg mb-1 tracking-tight">
               Lucklita Theng
             </p>
             <p className="text-[#92AFD7]/60 text-xs tracking-widest uppercase">
@@ -141,18 +145,23 @@ export default function LifeStory() {
             </p>
           </div>
           <div className="flex gap-6 text-[#92AFD7]/60 text-sm font-medium">
-            <a href="#" className="hover:text-[#F2AF29] transition-colors">
+            <a
+              href="https://linkedin.com/in/lucklita-theng"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#F2AF29] transition-colors"
+            >
               LinkedIn
             </a>
             <a
-              href="mailto:hello@lucklita.com"
+              href="mailto:lucklitatheng@proton.me"
               className="hover:text-[#F2AF29] transition-colors"
             >
               Email
             </a>
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-[#92AFD7]/15">
+        <div className="max-w-[880px] mx-auto mt-8 pt-6 border-t border-[#92AFD7]/15">
           <p className="text-[#92AFD7]/30 text-xs">
             © {new Date().getFullYear()} Lucklita Theng. All rights reserved.
           </p>
