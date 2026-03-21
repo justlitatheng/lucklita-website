@@ -1,39 +1,71 @@
-const projects = [
+"use client";
+
+import { useState } from "react";
+
+type Category = "all" | "professional" | "personal";
+
+type Project = {
+  number: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  tag: string;
+  category: Category;
+  accent: string;
+  cta?: string;
+  ctaHref?: string;
+};
+
+const projects: Project[] = [
   {
     number: "01",
-    title: "Project One",
+    title: "AI Opportunity Accelerator",
+    subtitle: "Google.org",
     description:
-      "Placeholder for an upcoming project at the intersection of technology and human impact. Big ideas, real people.",
-    tag: "Technology",
+      "Supporting 83 nonprofits across 4 US cities in adopting AI through coaching, strategy, and capacity building. I manage a team of 10 coaches — running thought partnerships, check-ins, and progress reviews to ensure organizations are meaningfully advancing their AI implementation. On the technical side, I build automated systems to capture and analyze coaching data, design frameworks to measure progress, and translate insights into strategic interventions. Human and technical, always both.",
+    tag: "Professional",
+    category: "professional",
     accent: "#F2AF29",
   },
   {
     number: "02",
-    title: "Project Two",
+    title: "Mental Health AI Accelerator",
+    subtitle: "",
     description:
-      "Placeholder for the second initiative — community-driven, research-backed, and built to last.",
-    tag: "Social Impact",
-    accent: "#588157",
-  },
-  {
-    number: "03",
-    title: "Project Three",
-    description:
-      "Systems thinking applied to messy human problems. Third project in progress.",
-    tag: "Research",
+      "Supporting a cohort of 21 domestic and international wellness organizations to use AI for better mental health outcomes. I own end-to-end program delivery — cohort communication, client relationships, working sessions, and coaching execution — helping organizations move from curiosity to real impact.",
+    tag: "Professional",
+    category: "professional",
     accent: "#92AFD7",
   },
   {
-    number: "04",
-    title: "Something New",
+    number: "03",
+    title: "Tech-Enabled Scaling Research",
+    subtitle: "",
     description:
-      "Something new is brewing. Watch this space — it'll be worth the wait.",
-    tag: "Stealth",
+      "Researched 200+ nonprofits globally, built a database of 125+ real-world AI implementation cases, and scraped 400+ program components to identify patterns in how nonprofits drive impact with AI. Synthesized findings into an interactive data visualization tool previewed across two focus groups and a live virtual event.",
+    tag: "Professional",
+    category: "professional",
+    accent: "#588157",
+  },
+  {
+    number: "04",
+    title: "Art Reach Cambodia",
+    subtitle: "ARC",
+    description:
+      "A personal passion project that became something bigger. ARC documents the underrepresented voices of Cambodia — women in the arts, journalists, activists, athletes, among many other creative individuals and identities — through multi-modal storytelling. We believe every story left untold is a piece of culture lost. Currently: completing our first series of short documentary videos featuring Cambodian artists, journalists, and athletes telling their own stories, in their own words. Funded by a $10,000 Davis Peace Project grant. Expanding in collaboration with Safe Space Battambang.",
+    tag: "Personal",
+    category: "personal",
     accent: "#A72608",
+    cta: "Visit ARC Website",
+    ctaHref: "#",
   },
 ];
 
 export default function Home() {
+  const [filter, setFilter] = useState<Category>("all");
+  const filteredProjects =
+    filter === "all" ? projects : projects.filter((p) => p.category === filter);
+
   return (
     <div className="min-h-screen">
       {/* ── Navigation ─────────────────────────────────────── */}
@@ -98,9 +130,9 @@ export default function Home() {
             >
               Technologist
               <br />·<br />
-              Social Impact Founder
+              Storyteller
               <br />·<br />
-              Optimist
+              Builder
             </p>
           </div>
         </div>
@@ -123,10 +155,20 @@ export default function Home() {
             className="font-display font-black text-[#1C1B18] leading-[0.86] tracking-[-0.035em]"
             style={{ fontSize: "clamp(5rem, 17vw, 18.5rem)" }}
           >
-            Lucklita
+            Lucklita.
           </h1>
 
-          {/* Tagline — floated right, editorial annotation feel */}
+          {/* Body text */}
+          <p
+            className="mt-6 text-[#3D405B]/65 leading-relaxed max-w-lg"
+            style={{ fontSize: "clamp(0.85rem, 1.3vw, 1rem)" }}
+          >
+            Technologist. Storyteller. Builder. I work at the edges — where
+            tech meets art, where data meets humanity, where problems meet
+            people who actually care.
+          </p>
+
+          {/* Buttons + tagline row */}
           <div className="flex justify-between items-end mt-8 md:mt-10">
             <div className="flex items-center gap-5">
               <a
@@ -147,7 +189,8 @@ export default function Home() {
               className="font-display italic text-[#3D405B]/70 text-right max-w-[220px] md:max-w-xs leading-snug"
               style={{ fontSize: "clamp(0.85rem, 1.5vw, 1.15rem)" }}
             >
-              &ldquo;Obsessed with finding the cruxes of everything.&rdquo;
+              &ldquo;An optimist obsessed with finding and solving the cruxes
+              of everything.&rdquo;
             </blockquote>
           </div>
         </div>
@@ -162,11 +205,11 @@ export default function Home() {
               <span key={i} className="flex gap-12 shrink-0">
                 <span>Technologist</span>
                 <span className="text-[#F2AF29]">✦</span>
-                <span>Social Impact Founder</span>
-                <span className="text-[#F2AF29]">✦</span>
-                <span>Optimist</span>
+                <span>Storyteller</span>
                 <span className="text-[#F2AF29]">✦</span>
                 <span>Builder</span>
+                <span className="text-[#F2AF29]">✦</span>
+                <span>Optimist</span>
                 <span className="text-[#F2AF29]">✦</span>
               </span>
             ))}
@@ -209,8 +252,12 @@ export default function Home() {
               className="font-display italic text-[#3D405B] leading-relaxed"
               style={{ fontSize: "clamp(1rem, 1.8vw, 1.3rem)" }}
             >
-              A person who genuinely believes ideas can change systems — and
-              spends her time proving it.
+              I bridge worlds — technology, art, culture, and impact — building
+              tools, telling stories, and asking the questions that matter.
+              I&apos;m a researcher, a maker, and a founder who believes the
+              most interesting problems live at the edges of disciplines.
+              Currently: helping nonprofits navigate AI at Project Evident.
+              Always: building something that shouldn&apos;t exist yet.
             </p>
           </div>
         </div>
@@ -273,9 +320,12 @@ export default function Home() {
       </section>
 
       {/* ── Section 3: Projects ──────────────────────────── */}
-      <section id="projects" className="bg-[#3D405B] py-24 md:py-32 px-8 md:px-14 overflow-hidden">
+      <section
+        id="projects"
+        className="bg-[#3D405B] py-24 md:py-32 px-8 md:px-14 overflow-hidden"
+      >
         {/* Section header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div>
             <p className="text-[10px] tracking-[0.3em] uppercase font-semibold text-[#92AFD7]/60 mb-5">
               03 — Work &amp; Projects
@@ -295,11 +345,30 @@ export default function Home() {
           </p>
         </div>
 
+        {/* Filter buttons */}
+        <div className="flex gap-3 mb-10">
+          {(["all", "professional", "personal"] as Category[]).map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setFilter(cat)}
+              className={`text-xs font-bold tracking-[0.2em] uppercase px-4 py-2 rounded-full transition-all ${
+                filter === cat
+                  ? "bg-[#F2AF29] text-[#3D405B]"
+                  : "border border-white/20 text-[#92AFD7]/60 hover:border-white/40 hover:text-[#92AFD7]"
+              }`}
+            >
+              {cat === "all"
+                ? "All"
+                : cat.charAt(0).toUpperCase() + cat.slice(1)}
+            </button>
+          ))}
+        </div>
+
         {/* Project cards — staggered grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {projects.map((project, i) => (
+          {filteredProjects.map((project, i) => (
             <div
-              key={i}
+              key={project.number}
               className={`group rounded-2xl p-8 md:p-10 border border-white/5 hover:scale-[1.02] transition-all duration-300 relative overflow-hidden ${
                 i === 1 ? "md:mt-8" : ""
               } ${i === 3 ? "md:-mt-4" : ""}`}
@@ -326,65 +395,46 @@ export default function Home() {
                 </span>
               </div>
 
-              <h3
-                className="font-display font-black text-[#f8f4ee] leading-tight mb-4 group-hover:text-[#F2AF29] transition-colors duration-300"
-                style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)" }}
-              >
-                {project.title}
-              </h3>
+              <div className="mb-4">
+                <h3
+                  className="font-display font-black text-[#f8f4ee] leading-tight group-hover:text-[#F2AF29] transition-colors duration-300"
+                  style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)" }}
+                >
+                  {project.title}
+                </h3>
+                {project.subtitle && (
+                  <p className="text-[#92AFD7]/50 text-sm mt-1">
+                    {project.subtitle}
+                  </p>
+                )}
+              </div>
+
               <p className="text-[#92AFD7]/60 leading-relaxed text-sm">
                 {project.description}
               </p>
-              <div
-                className="mt-8 flex items-center gap-1.5 text-sm font-medium transition-colors"
-                style={{ color: `${project.accent}80` }}
-              >
-                Coming soon
-                <span className="group-hover:translate-x-1 transition-transform inline-block">
-                  →
-                </span>
+
+              <div className="mt-8">
+                {project.cta && project.ctaHref ? (
+                  <a
+                    href={project.ctaHref}
+                    className="inline-flex items-center gap-2 bg-[#f8f4ee] text-[#3D405B] font-bold px-5 py-2.5 rounded-full hover:bg-[#F2AF29] transition-all text-sm"
+                  >
+                    {project.cta} →
+                  </a>
+                ) : (
+                  <div
+                    className="flex items-center gap-1.5 text-sm font-medium"
+                    style={{ color: `${project.accent}80` }}
+                  >
+                    Coming soon
+                    <span className="group-hover:translate-x-1 transition-transform inline-block">
+                      →
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
           ))}
-        </div>
-
-        {/* ARC callout inside projects section */}
-        <div className="mt-10 rounded-2xl p-8 md:p-12 bg-[#588157]/20 border border-[#588157]/30 flex flex-col md:flex-row gap-8 md:items-center">
-          <div className="flex-1">
-            <div className="inline-flex items-center gap-2 bg-[#588157] text-[#f8f4ee] text-[10px] font-bold tracking-[0.2em] uppercase px-4 py-2 rounded-full mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#F2AF29] animate-pulse" />
-              Social Impact
-            </div>
-            <h3
-              className="font-display font-black text-[#f8f4ee] leading-tight"
-              style={{ fontSize: "clamp(1.8rem, 4vw, 3.2rem)" }}
-            >
-              ARC — Art Reach
-              <br />
-              Cambodia
-            </h3>
-          </div>
-          <div className="flex-1">
-            <p className="text-[#92AFD7]/70 text-sm leading-relaxed mb-6">
-              A creative initiative connecting Cambodian artists and communities
-              through art education, cultural preservation, and the power of
-              human expression.
-            </p>
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 bg-[#f8f4ee] text-[#3D405B] font-bold px-5 py-2.5 rounded-full hover:bg-[#F2AF29] transition-all text-sm"
-              >
-                Learn More →
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 border border-[#f8f4ee]/30 text-[#f8f4ee] font-bold px-5 py-2.5 rounded-full hover:border-[#f8f4ee]/60 transition-all text-sm"
-              >
-                Get Involved
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -411,15 +461,22 @@ export default function Home() {
           </p>
 
           <h2
-            className="font-display font-black text-[#3D405B] leading-[0.88] tracking-[-0.03em] mb-12"
-            style={{ fontSize: "clamp(3.5rem, 11vw, 10rem)" }}
+            className="font-display font-black text-[#3D405B] leading-[0.88] tracking-[-0.03em] mb-8"
+            style={{ fontSize: "clamp(3rem, 9vw, 8rem)" }}
           >
-            Let&apos;s talk
+            Let&apos;s build
             <br />
-            about big
+            something
             <br />
-            ideas.
+            that shouldn&apos;t
+            <br />
+            exist yet.
           </h2>
+
+          <p className="text-[#3D405B]/70 text-base md:text-lg leading-relaxed mb-10 max-w-xl">
+            I&apos;m always open to collaborations, conversations, and
+            questions that don&apos;t have easy answers.
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-5 items-start">
             <a
@@ -429,12 +486,6 @@ export default function Home() {
               hello@lucklita.com →
             </a>
             <div className="flex gap-5 items-center pt-2 sm:pt-4">
-              <a
-                href="#"
-                className="text-sm font-semibold text-[#3D405B] hover:text-[#A72608] transition-colors"
-              >
-                Twitter ↗
-              </a>
               <a
                 href="#"
                 className="text-sm font-semibold text-[#3D405B] hover:text-[#A72608] transition-colors"
@@ -454,13 +505,10 @@ export default function Home() {
               Lucklita Theng
             </p>
             <p className="text-[#92AFD7]/60 text-xs tracking-widest uppercase">
-              Technologist · Founder · Optimist
+              Technologist · Storyteller · Builder
             </p>
           </div>
           <div className="flex gap-6 text-[#92AFD7]/60 text-sm font-medium">
-            <a href="#" className="hover:text-[#F2AF29] transition-colors">
-              Twitter
-            </a>
             <a href="#" className="hover:text-[#F2AF29] transition-colors">
               LinkedIn
             </a>
