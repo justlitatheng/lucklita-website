@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Nav from "./components/Nav";
 
-type Category = "all" | "professional" | "personal";
+type Category = "professional" | "personal";
 
 type Project = {
   number: string;
@@ -42,7 +43,7 @@ const projects: Project[] = [
     title: "Tech-Enabled Scaling Research",
     subtitle: "",
     description:
-      "Researched 200+ nonprofits globally, built a database of 125+ real-world AI implementation cases, and scraped 400+ program components to identify patterns in how nonprofits drive impact with AI. Synthesized findings into an interactive data visualization tool previewed across two focus groups and a live virtual event.",
+      "Researched 200+ nonprofits globally, built a database of 125+ real-world AI implementation cases, and analyzed 400+ program components to identify patterns in how nonprofits drive impact with AI. Synthesized findings into an interactive data visualization tool previewed across two focus groups and a live virtual event.",
     tag: "Professional",
     category: "professional",
     accent: "#588157",
@@ -62,45 +63,17 @@ const projects: Project[] = [
 ];
 
 export default function Home() {
-  const [filter, setFilter] = useState<Category>("all");
+  const [filter, setFilter] = useState<Category | null>(null);
   const filteredProjects =
-    filter === "all" ? projects : projects.filter((p) => p.category === filter);
+    filter === null ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <div className="min-h-screen">
-      {/* ── Navigation ─────────────────────────────────────── */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-14 py-5 bg-[#f8f4ee]/90 backdrop-blur-sm border-b border-[#3D405B]/10">
-        <a
-          href="/"
-          className="font-display font-black text-[#3D405B] text-2xl tracking-tight"
-        >
-          LT
-        </a>
-        <div className="flex items-center gap-7">
-          <a
-            href="#projects"
-            className="text-sm font-medium text-[#3D405B]/60 hover:text-[#3D405B] transition-colors"
-          >
-            Work
-          </a>
-          <a
-            href="#about"
-            className="text-sm font-medium text-[#3D405B]/60 hover:text-[#3D405B] transition-colors"
-          >
-            About
-          </a>
-          <a
-            href="mailto:hello@lucklita.com"
-            className="text-sm font-bold bg-[#F2AF29] text-[#3D405B] px-5 py-2.5 rounded-full hover:bg-[#F2AF29]/80 transition-all hover:scale-105"
-          >
-            Say Hi →
-          </a>
-        </div>
-      </nav>
+      <Nav />
 
-      {/* ── Section 1: Intro ──────────────────────────────── */}
+      {/* ── Section 1: Hero ──────────────────────────────── */}
       <section className="relative min-h-screen bg-[#f8f4ee] overflow-hidden flex flex-col">
-        {/* Floating decorative dots */}
+        {/* Floating decorative elements */}
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute top-[28%] right-[8%] w-2.5 h-2.5 rounded-full bg-[#F2AF29]" />
           <div className="absolute top-[55%] right-[18%] w-1.5 h-1.5 rounded-full bg-[#A72608]" />
@@ -109,13 +82,11 @@ export default function Home() {
             className="absolute top-[35%] right-[6%] w-px bg-[#92AFD7]/50"
             style={{ height: "120px" }}
           />
-          {/* Large soft gold glow bottom-right */}
           <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full bg-[#F2AF29] opacity-10 blur-[100px]" />
-          {/* Powder blue glow top-left */}
           <div className="absolute -top-16 -left-16 w-80 h-80 rounded-full bg-[#92AFD7] opacity-10 blur-[80px]" />
         </div>
 
-        {/* ── Top row: greeting + roles ── */}
+        {/* Top row: greeting + roles */}
         <div className="relative flex items-start justify-between px-8 md:px-14 pt-28">
           <p
             className="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#588157]"
@@ -137,20 +108,15 @@ export default function Home() {
           </div>
         </div>
 
-        {/* ── The name — editorial centerpiece ── */}
+        {/* Main headline block */}
         <div className="relative flex-1 flex flex-col justify-center px-8 md:px-14 pt-6 pb-10">
-          {/* "I'm" — small, italic, Fraunces */}
           <p
             className="font-display italic text-[#3D405B] leading-none mb-[-0.05em] ml-0.5 md:ml-1"
-            style={{
-              fontSize: "clamp(1.6rem, 4.5vw, 4rem)",
-              fontWeight: 300,
-            }}
+            style={{ fontSize: "clamp(1.6rem, 4.5vw, 4rem)", fontWeight: 300 }}
           >
             I&apos;m
           </p>
 
-          {/* LUCKLITA — full-width display headline */}
           <h1
             className="font-display font-black text-[#1C1B18] leading-[0.86] tracking-[-0.035em]"
             style={{ fontSize: "clamp(5rem, 17vw, 18.5rem)" }}
@@ -158,9 +124,16 @@ export default function Home() {
             Lucklita.
           </h1>
 
-          {/* Body text */}
           <p
-            className="mt-6 text-[#3D405B]/65 leading-relaxed max-w-lg"
+            className="mt-4 font-display italic text-[#3D405B]/70 max-w-2xl leading-snug"
+            style={{ fontSize: "clamp(1rem, 2vw, 1.4rem)" }}
+          >
+            An optimist obsessed with finding and solving the cruxes of
+            everything.
+          </p>
+
+          <p
+            className="mt-4 text-[#3D405B]/60 leading-relaxed max-w-lg"
             style={{ fontSize: "clamp(0.85rem, 1.3vw, 1rem)" }}
           >
             Technologist. Storyteller. Builder. I work at the edges — where
@@ -168,7 +141,6 @@ export default function Home() {
             people who actually care.
           </p>
 
-          {/* Buttons + tagline row */}
           <div className="flex justify-between items-end mt-8 md:mt-10">
             <div className="flex items-center gap-5">
               <a
@@ -184,18 +156,10 @@ export default function Home() {
                 About ↓
               </a>
             </div>
-
-            <blockquote
-              className="font-display italic text-[#3D405B]/70 text-right max-w-[220px] md:max-w-xs leading-snug"
-              style={{ fontSize: "clamp(0.85rem, 1.5vw, 1.15rem)" }}
-            >
-              &ldquo;An optimist obsessed with finding and solving the cruxes
-              of everything.&rdquo;
-            </blockquote>
           </div>
         </div>
 
-        {/* ── Bottom ticker-style strip ── */}
+        {/* Marquee ticker */}
         <div className="relative overflow-hidden border-t border-[#3D405B]/10 py-3 bg-[#F2AF29]/10">
           <div
             className="flex whitespace-nowrap gap-12 text-[11px] font-semibold tracking-[0.28em] uppercase text-[#3D405B]/50"
@@ -224,7 +188,6 @@ export default function Home() {
       >
         {/* Left panel — Powder Blue */}
         <div className="bg-[#92AFD7] px-10 md:px-14 py-20 flex flex-col justify-between relative overflow-hidden">
-          {/* Ghost letters behind */}
           <div
             className="pointer-events-none absolute -bottom-8 -left-4 font-display font-black text-[#3D405B]/10 leading-none select-none"
             style={{ fontSize: "clamp(8rem, 18vw, 16rem)" }}
@@ -264,8 +227,7 @@ export default function Home() {
 
         {/* Right panel — Cream with roles */}
         <div className="bg-[#f8f4ee] px-10 md:px-16 py-20 flex flex-col justify-center gap-12">
-          {/* Role 1 */}
-          <div className="border-l-4 border-[#F2AF29] pl-6 group">
+          <div className="border-l-4 border-[#F2AF29] pl-6">
             <div className="flex items-baseline gap-3 mb-2">
               <span className="font-mono text-xs text-[#F2AF29]">01</span>
               <h3
@@ -282,8 +244,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Role 2 */}
-          <div className="border-l-4 border-[#A72608] pl-6 group">
+          <div className="border-l-4 border-[#A72608] pl-6">
             <div className="flex items-baseline gap-3 mb-2">
               <span className="font-mono text-xs text-[#A72608]">02</span>
               <h3
@@ -300,8 +261,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Role 3 */}
-          <div className="border-l-4 border-[#588157] pl-6 group">
+          <div className="border-l-4 border-[#588157] pl-6">
             <div className="flex items-baseline gap-3 mb-2">
               <span className="font-mono text-xs text-[#588157]">03</span>
               <h3
@@ -324,7 +284,6 @@ export default function Home() {
         id="projects"
         className="bg-[#3D405B] py-24 md:py-32 px-8 md:px-14 overflow-hidden"
       >
-        {/* Section header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div>
             <p className="text-[10px] tracking-[0.3em] uppercase font-semibold text-[#92AFD7]/60 mb-5">
@@ -347,24 +306,22 @@ export default function Home() {
 
         {/* Filter buttons */}
         <div className="flex gap-3 mb-10">
-          {(["all", "professional", "personal"] as Category[]).map((cat) => (
+          {(["professional", "personal"] as Category[]).map((cat) => (
             <button
               key={cat}
-              onClick={() => setFilter(cat)}
+              onClick={() => setFilter(filter === cat ? null : cat)}
               className={`text-xs font-bold tracking-[0.2em] uppercase px-4 py-2 rounded-full transition-all ${
                 filter === cat
                   ? "bg-[#F2AF29] text-[#3D405B]"
                   : "border border-white/20 text-[#92AFD7]/60 hover:border-white/40 hover:text-[#92AFD7]"
               }`}
             >
-              {cat === "all"
-                ? "All"
-                : cat.charAt(0).toUpperCase() + cat.slice(1)}
+              {cat.charAt(0).toUpperCase() + cat.slice(1)}
             </button>
           ))}
         </div>
 
-        {/* Project cards — staggered grid */}
+        {/* Project cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {filteredProjects.map((project, i) => (
             <div
@@ -374,7 +331,6 @@ export default function Home() {
               } ${i === 3 ? "md:-mt-4" : ""}`}
               style={{ background: "rgba(255,255,255,0.04)" }}
             >
-              {/* Top accent line */}
               <div
                 className="absolute top-0 left-0 right-0 h-[3px]"
                 style={{ background: project.accent }}
@@ -443,7 +399,6 @@ export default function Home() {
         id="contact"
         className="relative bg-[#F2AF29] py-28 md:py-36 px-8 md:px-14 overflow-hidden"
       >
-        {/* Ghost number behind */}
         <div
           className="pointer-events-none absolute -bottom-10 -right-6 font-display font-black text-[#3D405B]/10 leading-none select-none"
           style={{ fontSize: "clamp(12rem, 30vw, 28rem)" }}
@@ -451,8 +406,6 @@ export default function Home() {
         >
           04
         </div>
-
-        {/* Iron red accent blob top-right */}
         <div className="pointer-events-none absolute top-0 right-0 w-64 h-64 rounded-full bg-[#A72608] opacity-10 blur-[70px]" />
 
         <div className="relative max-w-5xl">
