@@ -47,7 +47,7 @@ const projects = [
     category: "personal" as Category,
     accent: "#A72608",
     cta: "Visit ARC Website",
-    ctaHref: "#",
+    ctaHref: "https://arc-website-olive.vercel.app",
   },
 ];
 
