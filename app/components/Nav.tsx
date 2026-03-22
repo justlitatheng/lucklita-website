@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Resume", href: "/resume", internal: true },
   { label: "Life Story", href: "/life-story", internal: true },
   { label: "Blog", href: "https://medium.com", internal: false },
-  { label: "ARC", href: "#", internal: false },
+  { label: "ARC", href: "https://arc-website-olive.vercel.app", internal: false },
 ];
 
 export default function Nav() {
