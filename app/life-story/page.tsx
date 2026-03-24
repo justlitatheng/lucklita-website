@@ -5,31 +5,31 @@ const chapters = [
     label: "Age 6",
     location: "Phnom Penh, Cambodia",
     accent: "#F2AF29",
-    body: "I was in a car with my late grandfather, a cabinet minister who spent his life trying to pass policies that would benefit the Khmer people. I asked him, with complete sincerity: is politics the most direct way to change the world? He gave me an old man's honest answer. It's complicated, he said. You have to know people, their motives, their wants. The system is intricate. Power is everywhere. I filed that away. Politics wasn't my path — not because I didn't care, but because I wanted to build things, not navigate power. I wanted impact without the performance.",
+    body: "I was in a car with my late grandfather, a cabinet minister who spent his life trying to pass policies that would benefit the Khmer people. I asked him, with complete sincerity, whether politics was the most direct way to change the world. He gave me an honest answer — it's more complicated than that, he said. You have to know people, understand their motives, navigate systems where power is everywhere and nothing is straightforward. I filed that away. Politics wasn't my path, not because I didn't care, but because I wanted to build things and create spaces where people could thrive. I wanted impact that didn't require me to perform.",
   },
   {
     label: "Age 16",
     location: "Karuizawa, Japan",
     accent: "#92AFD7",
-    body: "I was studying at UWC ISAK — a school built on the belief that education can bring about positive social change. At a summer camp in Chiba, a college student said something that stopped me: education, once gained, cannot be taken away. It is the one force that truly unifies a society. I believed it. I still do. But I also realized: I didn't want to be a teacher. I was impulsive, driven, impatient in the best way. Education was a core value — not a career path. What lit me up instead: Design Thinking. Entrepreneurship. The idea that you could find a problem, build a solution, and put it into the world. Learning as a byproduct of doing. That felt right.",
+    body: "I was studying at UWC ISAK, a school built on the belief that education can bring about positive social change. At a summer camp in Chiba, a college student said something that stayed with me: education, once gained, cannot be taken away. It is one of the few forces that can truly unify a society. I believed that then, and I still do. But I also started to realize that my path wasn't traditional teaching or academia. I was impulsive, driven, and eager to see ideas become real things in the world. What lit me up was Design Thinking and Entrepreneurship — the idea that you could find a problem, build a solution, and put it out into the world. Learning as a byproduct of doing. That felt right for me.",
   },
   {
     label: "Age 20",
-    location: "Phnom Penh, Cambodia (Again)",
+    location: "Phnom Penh, Cambodia",
     accent: "#588157",
-    body: "Gap year. Working at a journalism startup in a co-working space in Phnom Penh, across from a tech startup. I got talking to a developer everyone called Brilliant — self-taught, sharp, a decade older than me. I told him I thought tech was fascinating but probably not for me. He looked at me like I'd said something absurd. You're about to go study in the US, he said, and you think you can't learn to code? My degree was in communications. I taught myself everything. If I can do it, you can do it. That stuck. That changed everything. I went to Carleton College and majored in Computer Science with a focus on Human-Computer Interaction. Not because I wanted to be the best engineer — but because I wanted to speak the language. To work alongside engineers, to build things that mattered, to use technology as a tool in service of everything else I cared about.",
+    body: "During my gap year, I was working at a journalism startup in a co-working space in Phnom Penh, right across from a tech startup called Koompi — a company working to build Cambodia's first laptop and operating system. I got talking to one of their developers, a self-taught engineer everyone called Brilliant. When I told him I thought tech was fascinating but probably not for someone like me, he looked genuinely puzzled. You're about to go study in the United States, he said, and you think you can't learn to code? My own degree was in communications and I taught myself everything. If I can do it, you can do it. That conversation changed the direction of my life. I went to Carleton College and majored in Computer Science with a focus on Human-Computer Interaction — not because I wanted to be the best engineer, but because I wanted to speak the language, work alongside engineers, and use technology as a tool in service of everything else I cared about.",
   },
   {
     label: "Age 23",
     location: "Northfield, Minnesota",
     accent: "#A72608",
-    body: "Senior year. A car hit me as a pedestrian. I missed job application season. I had a medical leave and more time than I'd ever had to just — think. What did I actually want? Not the most prestigious job. Not the highest salary. I wanted to be a bridge. Between technology and people. Between what's possible and what's needed. Between the engineers building things and the communities those things are supposed to serve.",
+    body: "During my senior year, I was hit by a car as a pedestrian. I missed job application season and took a medical leave. It gave me more time to think than I'd ever had before. What did I actually want? Not the most prestigious title or the highest salary. I wanted to be a bridge between technology and people, between what's technically possible and what communities actually need. That clarity has guided every decision I've made since.",
   },
   {
     label: "Today",
     location: "",
     accent: "#3D405B",
-    body: "I'm 26, working at Project Evident as part of their OutcomesAI practice — helping nonprofits adopt AI for good. I'm a consultant, a researcher, a builder, and sometimes a translator between worlds that don't always speak the same language. I also founded Art Reach Cambodia, documenting the underrepresented voices of Khmer artists, journalists, and athletes — because technology without story is just infrastructure. The quest continues. The pieces are fitting together. And I'm just getting started.",
+    body: "I'm 26, working at Project Evident as part of their OutcomesAI practice, helping nonprofits adopt AI in ways that genuinely improve their work and the communities they serve. I'm a researcher, a builder, and someone who finds deep satisfaction in making complex things accessible to people who need them most. I also founded Art Reach Cambodia, a project close to my heart that documents the underrepresented voices of Khmer artists, athletes, and journalists — because I believe storytelling and technology are most powerful when they work together. The quest continues, and I'm just getting started.",
   },
 ];
 
@@ -48,9 +48,7 @@ export default function LifeStory() {
           className="font-display font-black text-[#1C1B18] leading-[0.88] tracking-[-0.03em] mb-8"
           style={{ fontSize: "clamp(3.5rem, 10vw, 9rem)" }}
         >
-          The Quest
-          <br />
-          <span className="text-[#3D405B]/30">So Far.</span>
+          The Quest So Far.
         </h1>
 
         {/* Opening */}
@@ -61,9 +59,9 @@ export default function LifeStory() {
           >
             I&apos;ve been asking the same question since I was six years old:
             what&apos;s the most effective way to create change in the world?
-            Not who am I — I&apos;ve always known that. But where do I fit? How
-            do my pieces connect? Maybe the role doesn&apos;t exist yet. Maybe
-            I have to build it. This is the quest so far.
+            Not who am I — I&apos;ve always known that. But where do I fit, and
+            how do all my pieces connect? Maybe the role doesn&apos;t exist yet.
+            Maybe I have to build it. This is the quest so far.
           </p>
         </div>
         </div>

@@ -60,12 +60,12 @@ const roles = [
   {
     label: "Social Impact Founder",
     accent: "#A72608",
-    body: "Creating organisations that outlast their founders and solve problems that actually matter. Currently: ARC — Art Reach Cambodia.",
+    body: "Building organisations rooted in community and designed to last. Currently: Art Reach Cambodia, a project that documents underrepresented Khmer voices through storytelling and technology.",
   },
   {
     label: "Optimist",
     accent: "#588157",
-    body: "Genuinely believing in the power of people to build a better world. Not naively — relentlessly. The crux-finding never stops.",
+    body: "Genuinely believing in the power of people to build a better world, with eyes wide open. I stay curious about root causes, keep asking why, and find the work of understanding problems as satisfying as solving them.",
   },
 ];
 
@@ -106,9 +106,12 @@ export default function Home() {
           </p>
 
           <p className="text-[#3D405B]/65 leading-relaxed max-w-lg mb-10 text-base">
-            Technologist. Storyteller. Builder. I work at the edges — where
-            tech meets art, where data meets humanity, where problems meet
-            people who actually care.
+            At the core of who I am is a deep belief in technology as a force
+            for good — one that works best when it is human, accessible, and in
+            service of the communities that need it most. I work at the edges of
+            technology, art, and social impact, building things and telling
+            stories that I hope make the world a little more equitable and a lot
+            more interesting.
           </p>
 
           <div className="flex items-center gap-4 flex-wrap">
@@ -120,7 +123,7 @@ export default function Home() {
             </a>
             <a
               href="#about"
-              className="text-sm font-medium text-[#3D405B]/50 hover:text-[#3D405B] transition-colors"
+              className="inline-flex items-center gap-2 border-2 border-[#3D405B]/25 text-[#3D405B] font-bold px-6 py-3 rounded-full text-sm hover:border-[#3D405B] transition-all hover:scale-105"
             >
               About ↓
             </a>
@@ -139,15 +142,16 @@ export default function Home() {
               className="font-display italic text-[#3D405B] leading-relaxed"
               style={{ fontSize: "clamp(1rem, 1.6vw, 1.2rem)" }}
             >
-              I bridge worlds — technology, art, culture, and impact — building
-              tools, telling stories, and asking the questions that matter.
-              Currently helping nonprofits navigate AI at{" "}
+              I bridge worlds — technology, art, culture, and impact. I am a
+              researcher, a builder, and a founder who believes the most
+              interesting and important problems live at the intersection of
+              disciplines. Currently helping nonprofits navigate AI at{" "}
               <span className="not-italic font-bold">Project Evident</span>.
-              Always building something that shouldn&apos;t exist yet.
+              Always working on something that I hope matters.
             </p>
             <Link
               href="/life-story"
-              className="inline-block mt-4 text-sm font-semibold text-[#588157] hover:text-[#3D405B] transition-colors"
+              className="inline-flex items-center gap-2 mt-5 border-2 border-[#588157]/40 text-[#588157] font-bold px-6 py-3 rounded-full text-sm hover:border-[#588157] hover:bg-[#588157]/8 transition-all hover:scale-105"
             >
               Read my full story →
             </Link>
