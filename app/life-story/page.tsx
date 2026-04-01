@@ -2,34 +2,34 @@ import Nav from "../components/Nav";
 
 const chapters = [
   {
-    label: "Age 6",
+    label: "Age 7",
     location: "Phnom Penh, Cambodia",
     accent: "#F2AF29",
-    body: "I was in a car with my late grandfather, a cabinet minister who spent his life trying to pass policies that would benefit the Khmer people. I asked him, with complete sincerity, whether politics was the most direct way to change the world. He gave me an honest answer — it's more complicated than that, he said. You have to know people, understand their motives, navigate systems where power is everywhere and nothing is straightforward. I filed that away. Politics wasn't my path, not because I didn't care, but because I wanted to build things and create spaces where people could thrive. I wanted impact that didn't require me to perform.",
+    body: "I was in a car with my late grandfather, a cabinet minister who spent his life trying to pass policies that would benefit the Khmer people. I asked him, with complete sincerity, whether politics was the most direct way to change the world. He gave me an honest answer — it's more complicated than that, he said. You have to know people, understand their motives, navigate systems where power is everywhere and nothing is straightforward.\n\nI understood what he meant. And I could see myself in that world someday. But I wasn't ready for it yet — I still wanted to build things, make things, figure out how stuff worked. Policy felt like something for later. First, I wanted to get my hands on everything.",
   },
   {
     label: "Age 16",
     location: "Karuizawa, Japan",
     accent: "#92AFD7",
-    body: "I was studying at UWC ISAK, a school built on the belief that education can bring about positive social change. At a summer camp in Chiba, a college student said something that stayed with me: education, once gained, cannot be taken away. It is one of the few forces that can truly unify a society. I believed that then, and I still do. But I also started to realize that my path wasn't traditional teaching or academia. I was impulsive, driven, and eager to see ideas become real things in the world. What lit me up was Design Thinking and Entrepreneurship — the idea that you could find a problem, build a solution, and put it out into the world. Learning as a byproduct of doing. That felt right for me.",
+    body: "I was studying at UWC ISAK, a school built on the belief that education can bring about positive social change. Being there exposed me to \u201cdesign thinking\u201d and entrepreneurship for the first time — and something clicked. The idea that you could find a problem, build a solution, and put it out into the world. Learning as a byproduct of doing. More than the subjects though, ISAK gave me something harder to name: agency. The freedom to direct my own learning, to take ownership of my own education experience. It convinced me, slowly and then all at once, that I could do anything I put my mind to.\n\nWhile I was in Japan, I came across Gakko — a summer camp program that I still think about. Two things stayed with me from that experience. The first was simple: write your thoughts down. It is a powerful way to track your own growth. I started keeping a journal then and haven't stopped. The second came from a college student mentor who said something that landed quietly and then kept echoing — education, once gained, cannot be taken away. It is one of the few forces that genuinely equips people to change their own situations. I believed that deeply, partly because I was proof of it.\n\nI knew I wasn't built for a traditional classroom — I am too impatient, too eager to see ideas become real things. But the passion to help others unlock their own potential never left me. It just found different shapes.",
   },
   {
     label: "Age 20",
     location: "Phnom Penh, Cambodia",
     accent: "#588157",
-    body: "During my gap year, I was working at a journalism startup in a co-working space in Phnom Penh, right across from a tech startup called Koompi — a company working to build Cambodia's first laptop and operating system. I got talking to one of their developers, a self-taught engineer everyone called Brilliant. When I told him I thought tech was fascinating but probably not for someone like me, he looked genuinely puzzled. You're about to go study in the United States, he said, and you think you can't learn to code? My own degree was in communications and I taught myself everything. If I can do it, you can do it. That conversation changed the direction of my life. I went to Carleton College and majored in Computer Science with a focus on Human-Computer Interaction — not because I wanted to be the best engineer, but because I wanted to speak the language, work alongside engineers, and use technology as a tool in service of everything else I cared about.",
+    body: "During my gap year, I was working at a journalism startup in a co-working space in Phnom Penh, right across from a tech startup called Koompi, a company working to build Cambodia\u2019s first laptop and operating system. I got talking to one of their developers, a self-taught engineer everyone called Brilliant. When I told him I thought tech was fascinating but probably not for someone like me, he looked genuinely puzzled. You\u2019re about to go study in the United States, he said, and you think you can\u2019t learn to code? My own degree was in communications and I taught myself everything. If I can do it, you can do it.\n\nThat stuck with me. I went to Carleton College and majored in Computer Science with a focus on Human-Computer Interaction. Not because I wanted to be the best engineer, but because I wanted to speak the language, work alongside engineers, and use technology as a tool for everything else I cared about.",
   },
   {
     label: "Age 23",
     location: "Northfield, Minnesota",
     accent: "#A72608",
-    body: "During my senior year, I was hit by a car as a pedestrian. I missed job application season and took a medical leave. It gave me more time to think than I'd ever had before. What did I actually want? Not the most prestigious title or the highest salary. I wanted to be a bridge between technology and people, between what's technically possible and what communities actually need. That clarity has guided every decision I've made since.",
+    body: "During my senior year, I was hit by a car as a pedestrian. I missed job application season and took a medical leave. It gave me more time to think than I had ever had before.\n\nWhat I found was a tension I hadn't fully named yet. One part of me genuinely wants to do good in the world — and doing good is rarely glamorous. It is tedious work, messy systems, slow progress, unglamorous detangling of things that shouldn't have gotten tangled in the first place.\n\nBut there is another part of me that is just hungry. To build, to network, to grow, to figure out how things work and then make them work better. That part lights me up in a completely different way — the strategy, the hustle, the thrill of making something out of nothing.\n\nI used to feel like those two things didn't belong in the same person. I didn't see many role models who had both that I can relate to as a woman of color from Cambodia. So I decided I wanted to become one — someone who could do the necessary, unglamorous work and still be driven, ambitious, and rewarded well for it. I want my cake and I want to eat it too.",
   },
   {
     label: "Today",
     location: "",
     accent: "#3D405B",
-    body: "I'm 26, working at Project Evident as part of their OutcomesAI practice, helping nonprofits adopt AI in ways that genuinely improve their work and the communities they serve. I'm a researcher, a builder, and someone who finds deep satisfaction in making complex things accessible to people who need them most. I also founded Art Reach Cambodia, a project close to my heart that documents the underrepresented voices of Khmer artists, athletes, and journalists — because I believe storytelling and technology are most powerful when they work together. The quest continues, and I'm just getting started.",
+    body: "I am 26, living in Boston, and working at Project Evident on their OutcomesAI team \u2014 helping nonprofits figure out how to use AI in ways that actually serve the people they work with. It is the kind of work that is sometimes tedious, sometimes genuinely exciting, and always rooted in something real.\n\nI also started Art Reach Cambodia, a documentary storytelling project that documents Khmer artists, athletes, and journalists whose stories don\u2019t get told enough. It started as a personal question and turned into something much bigger than me.\n\nThe tension I felt at 23 is still there, honestly. I am still figuring out how to be all the things I want to be. I am less afraid of that now. I know what I care about, I know what lights me up. Things are starting to come together, and I am paying attention.",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function LifeStory() {
             className="font-display italic text-[#3D405B] leading-relaxed"
             style={{ fontSize: "clamp(1.1rem, 2vw, 1.4rem)" }}
           >
-            I&apos;ve been asking the same question since I was six years old:
+            I&apos;ve been asking the same question since I was seven years old:
             what&apos;s the most effective way to create change in the world?
             Not who am I — I&apos;ve always known that. But where do I fit, and
             how do all my pieces connect? Maybe the role doesn&apos;t exist yet.
@@ -108,12 +108,17 @@ export default function LifeStory() {
                 />
 
                 {/* Body text */}
-                <p
-                  className="text-[#3D405B] leading-[1.9] max-w-2xl"
-                  style={{ fontSize: "clamp(0.95rem, 1.5vw, 1.1rem)" }}
-                >
-                  {chapter.body}
-                </p>
+                <div className="space-y-5 max-w-2xl">
+                  {chapter.body.split("\n\n").map((para, p) => (
+                    <p
+                      key={p}
+                      className="text-[#3D405B] leading-[1.9]"
+                      style={{ fontSize: "clamp(0.95rem, 1.5vw, 1.1rem)" }}
+                    >
+                      {para}
+                    </p>
+                  ))}
+                </div>
               </div>
             </article>
           ))}
@@ -125,7 +130,7 @@ export default function LifeStory() {
             className="font-display italic text-[#3D405B]/50"
             style={{ fontSize: "clamp(1rem, 2vw, 1.3rem)" }}
           >
-            ✦ &nbsp; still writing.
+            ✦ &nbsp; more to come, still writing, and scribbling away...
           </p>
         </div>
         </div>

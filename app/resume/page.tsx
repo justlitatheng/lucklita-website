@@ -9,42 +9,29 @@ const experience = [
     accent: "#F2AF29",
     sections: [
       {
-        heading: "Experimentation & Iteration",
+        heading: "AI Research & Development",
         bullets: [
-          "Designed and executed A/B experiments across 4 regional cohorts (SF, Austin, SC, Atlanta) serving 250+ participants, improving \u201cvery satisfied\u201d ratings from 50% to 61%.",
-          "Led rapid iteration cycles adjusting program features based on real-time exit survey data, achieving 82% of participants reporting improved AI understanding mid-program.",
-          "Implemented structured feedback loops through exit surveys and qualitative interviews.",
+          "Built automated data collection system using Python, developing a site scraper that collected 400+ data points from Impact Genome, accelerating research processes by 200% and enabling comprehensive nonprofit AI adoption analysis.",
+          "Conducted large-scale organizational research analyzing 100+ organizations, with in-depth analysis of 65+ nonprofits performing deep research into AI adoption patterns and creating evidence-based framework for technology integration in nonprofit sector.",
         ],
       },
       {
-        heading: "Research, Metrics & Strategy",
+        heading: "Cross-Functional Collaboration & Teaching",
         bullets: [
-          "Managed a network of 10 coaches supporting 83 nonprofits across 4 US cities — running thought partnerships, progress reviews, and strategic interventions.",
-          "Built and maintained analytics system tracking coaching engagement across 83 organizations.",
-          "Drove simplification initiative reducing AI implementation template from 30 pages to 2 pages, improving completion rates from 14% to 71%.",
-          "Defined and tracked engagement metrics for community platform growing to 352 members.",
+          "Led AI capacity building initiatives for Google.org-sponsored program, designing and delivering training materials and workshops that enabled nonprofit staff to effectively use LLM tools in their workflows, reaching 250+ participants across 80+ organizations.",
+          "Automated knowledge sharing processes by building a learning log Excel system with Slack integration using Zapier AI, streamlining information flow between cross-functional teams and reducing manual documentation time by 65%.",
         ],
       },
       {
-        heading: "Technical & Automation",
+        heading: "Product Development & User Experience",
         bullets: [
-          "Built automated data capture system using a Python script to scrape and synthesize publicly available nonprofit data, informing program strategy and research findings.",
-          "Built automated knowledge sharing system using Zapier and Slack integration, reducing manual documentation time by 65%.",
-          "Developed 50+ training materials, guides, and case studies.",
-        ],
-      },
-      {
-        heading: "User Research",
-        bullets: [
-          "Conducted 8–10 user interviews with community foundation members.",
-          "Facilitated workflow mapping sessions with 7–10 nonprofit participants.",
-          "Led cross-functional requirements gathering with 5–7 internal stakeholders before platform launch.",
+          "Designed and managed community platform engaging 300+ members in AI education, optimizing user experience to drive adoption and engagement in nonprofit sector while implementing responsible AI practices.",
         ],
       },
     ],
   },
   {
-    title: "Associate Product Manager & Software Engineer",
+    title: "Associate Product Manager & Junior Software Engineer",
     company: "We Sparkle Co.",
     location: "Minneapolis, MN",
     period: "September 2023 – January 2024",
@@ -53,15 +40,14 @@ const experience = [
       {
         heading: "",
         bullets: [
-          "Shipped full-stack features using React and C#.",
-          "Implemented subscription monetization features.",
-          "Applied user-centric design processes using Figma prototyping.",
+          "Implemented user-centric design processes using Figma prototyping and A/B testing methodologies, ensuring product features aligned with customer needs and business objectives.",
+          "Developed subscription monetization features using React and C#, enabling email subscription and platform fee contribution capabilities, collaborating with engineering teams to prioritize technical trade-offs and feature developments.",
         ],
       },
     ],
   },
   {
-    title: "Project Coordinator & Tech Mentor",
+    title: "Project Coordinator & Peer Mentor",
     company: "Software for Good",
     location: "St. Paul, MN",
     period: "June 2022 – August 2022",
@@ -70,50 +56,89 @@ const experience = [
       {
         heading: "",
         bullets: [
-          "Managed cross-functional team of 11 developers building two web applications using agile methodologies.",
-          "Established code review standards and testing protocols.",
-          "Collaborated with stakeholders to gather requirements and prioritize features.",
+          "Coordinated cross-functional team of 11 apprentices developing two web applications using Ruby on Rails and PostgreSQL, following agile practices.",
+          "Established standardized development processes and mentored team members in software engineering best practices, improving code quality and project delivery consistency via weekly pair-programming and code-review sessions.",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Research Assistant",
+    company: "Office of Institutional Research Assessment, Carleton College",
+    location: "",
+    period: "September 2021 – May 2022",
+    accent: "#A72608",
+    sections: [
+      {
+        heading: "",
+        bullets: [
+          "Built complex data aggregation systems using Python and SQL, processing 1000+ data points for executive decision-making.",
+          "Collaborated with leadership on data-centric research projects, providing analytical insights that informed students' resource allocation.",
         ],
       },
     ],
   },
 ];
 
+const projects = [
+  {
+    title: "Project-Lead",
+    subtitle: "Art Reach Cambodia (ARC)",
+    period: "June 2021 – Present",
+    accent: "#F2AF29",
+    bullets: [
+      "Secured $10,000+ in funding through comprehensive project proposal demonstrating alignment with global impact mission, designed digital platform architecture creating Figma wireframes, showcasing ability to build prototypes that bridge technology and social impact.",
+    ],
+  },
+  {
+    title: "Interactive Data Visualization for Government Transparency",
+    subtitle: "",
+    period: "September 2022 – February 2023",
+    accent: "#92AFD7",
+    bullets: [
+      "Developed web application with 6-person interdisciplinary team analyzing US political funding sources, designing React JS interface that improved data accessibility for public users.",
+    ],
+  },
+  {
+    title: "Educational Assessment via Machine Learning Research",
+    subtitle: "",
+    period: "September 2022 – January 2023",
+    accent: "#588157",
+    bullets: [
+      "Conducted machine learning research on Dynamic Key Value Memory Networks for K-12 educational assessment, testing models with synthetic and real datasets using Python.",
+    ],
+  },
+];
+
 const skills = [
   {
-    category: "Research & Strategy",
+    category: "Development Tools",
     items:
-      "User Research, Qualitative & Quantitative Analysis, Sentiment Analysis, Statistical Methods, Data Visualization, Workflow Mapping, User Journey Mapping",
+      "Python, C#, React, Git, Azure DevOps, PostgreSQL, API Development, Software Development Lifecycle",
   },
   {
-    category: "Development & Tools",
+    category: "Collaboration Tools",
     items:
-      "React, Python, JavaScript, TypeScript, SQL, C#, Ruby on Rails, Figma, Git, Azure DevOps, PostgreSQL, Zapier",
-  },
-  {
-    category: "Design",
-    items: "Wireframing, Prototyping, Usability Testing, Information Architecture",
-  },
-  {
-    category: "Collaboration",
-    items:
-      "Cross-Functional Leadership, Stakeholder Management, Technical Communication, Agile/Scrum",
+      "Figma, Zapier, Slack Integration, Agile Methodologies, Cross-Functional Project Management",
   },
 ];
 
 const awards = [
   {
     title: "David Pollatsek '96 Prize in Computer Science",
-    subtitle: "Carleton College's highest honor for CS achievement",
+    subtitle: "Carleton College's highest honor for creative interdisciplinary application of computer science",
     accent: "#F2AF29",
   },
-  { title: "Projects for Peace Award", subtitle: "", accent: "#588157" },
+  {
+    title: "Projects for Peace Award",
+    subtitle: "Recognition for developing innovative solutions addressing global challenges, with ARC",
+    accent: "#588157",
+  },
   {
     title: "TEDx Youth Bangkok",
-    subtitle: "Selected Speaker",
+    subtitle: "Selected Speaker — Topic: 'Cambodia Reimagined'",
     accent: "#92AFD7",
   },
-  { title: "UWC Davis Scholar", subtitle: "", accent: "#A72608" },
 ];
 
 export default function Resume() {
@@ -136,9 +161,18 @@ export default function Resume() {
               <br />
               Theng
             </h1>
+            <div className="mt-4 flex flex-col gap-1 text-[#3D405B]/60 text-sm">
+              <a href="mailto:lucklitatheng@proton.me" className="hover:text-[#3D405B] transition-colors">
+                lucklitatheng@proton.me
+              </a>
+              <a href="https://linkedin.com/in/lucklita-theng" target="_blank" rel="noopener noreferrer" className="hover:text-[#3D405B] transition-colors">
+                linkedin.com/in/lucklita-theng
+              </a>
+            </div>
           </div>
           <a
-            href="#"
+            href="/Lucklita_Theng_Resume.pdf"
+            download
             className="inline-flex items-center gap-2 bg-[#3D405B] text-[#F2AF29] font-bold px-6 py-3 rounded-full text-sm hover:bg-[#3D405B]/80 transition-all hover:scale-105 self-start md:self-end"
           >
             Download PDF ↓
@@ -152,13 +186,7 @@ export default function Resume() {
         <section>
           <SectionLabel>Professional Summary</SectionLabel>
           <p className="text-[#3D405B] leading-[1.85] max-w-3xl" style={{ fontSize: "clamp(0.95rem, 1.4vw, 1.05rem)" }}>
-            Data-driven technologist and researcher with 2+ years of experience
-            at the intersection of AI, social impact, and human-centered design.
-            Track record of building automated systems, conducting rigorous
-            research, and designing capacity-building programs that drive
-            measurable outcomes. Skilled at bridging the technical and human —
-            translating complex data into strategy, and strategy into
-            implementation.
+            Mission-driven technologist with a Computer Science background and budding experience developing AI-integrated tools for social impact across sectors. Demonstrated proficiency in rapid prototyping and translating research into practical applications that serve underserved communities, while maintaining focus on responsible development and equitable outcomes.
           </p>
         </section>
 
@@ -179,8 +207,7 @@ export default function Resume() {
               &nbsp;·&nbsp; GPA: 3.7
             </p>
             <p className="text-[#3D405B]/50 text-sm">
-              Relevant Coursework: Human-Computer Interaction, Data
-              Visualization, Software Design, Algorithms
+              Relevant Coursework: Data Structures, Algorithms, Machine Learning, Human-Computer Interaction, Data Visualization, Software Design
             </p>
           </div>
         </section>
@@ -232,6 +259,38 @@ export default function Resume() {
           </div>
         </section>
 
+        {/* ── Key Projects ─────────────────────────────── */}
+        <section>
+          <SectionLabel>Key Projects</SectionLabel>
+          <div className="space-y-10">
+            {projects.map((project, i) => (
+              <div key={i} className="border-l-4 pl-6 py-1" style={{ borderColor: project.accent }}>
+                <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 mb-1">
+                  <h3 className="font-display font-black text-[#1C1B18]" style={{ fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)" }}>
+                    {project.title}
+                  </h3>
+                  <span className="text-sm text-[#3D405B]/50 font-medium shrink-0">
+                    {project.period}
+                  </span>
+                </div>
+                {project.subtitle && (
+                  <p className="text-sm font-semibold mb-4" style={{ color: project.accent }}>
+                    {project.subtitle}
+                  </p>
+                )}
+                <ul className="space-y-2 mt-3">
+                  {project.bullets.map((bullet, k) => (
+                    <li key={k} className="flex gap-3 text-[#3D405B]/80 text-sm leading-relaxed">
+                      <span className="mt-[6px] shrink-0 w-1 h-1 rounded-full bg-current opacity-40" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* ── Skills ───────────────────────────────────── */}
         <section>
           <SectionLabel>Technical Skills</SectionLabel>
@@ -254,7 +313,7 @@ export default function Resume() {
 
         {/* ── Awards ───────────────────────────────────── */}
         <section>
-          <SectionLabel>Awards &amp; Recognition</SectionLabel>
+          <SectionLabel>Recognition</SectionLabel>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {awards.map((award, i) => (
               <div
