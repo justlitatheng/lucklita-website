@@ -1,31 +1,36 @@
 import Nav from "../components/Nav";
+import { RESUME_URL } from "../lib/resume";
 
 const experience = [
+  {
+    title: "AI Product & Partnerships Consultant",
+    company: "iBlueprint.ai",
+    location: "Philadelphia, PA",
+    period: "August 2026 – Present",
+    accent: "#F2AF29",
+    sections: [
+      {
+        heading: "",
+        bullets: [
+          "Run structured product QA for an AI chatbot and workflow-agent platform from both individual-user and org-admin perspectives, auditing the prompt library, blueprints, and knowledge-base content, and building a repeatable QA protocol for the team.",
+          "Support investment and sales pipeline development (VC outreach materials, target lead lists) and represent the platform within a government and social-impact tech cohort, coordinating with partners including Nava, the State of Maryland, and Google.org.",
+        ],
+      },
+    ],
+  },
   {
     title: "Associate II, OutcomesAI Team",
     company: "Project Evident",
     location: "Boston, MA",
-    period: "November 2023 – Present",
-    accent: "#F2AF29",
+    period: "November 2024 – August 2026",
+    accent: "#92AFD7",
     sections: [
       {
-        heading: "AI Research & Development",
+        heading: "",
         bullets: [
-          "Built automated data collection system using Python, developing a site scraper that collected 400+ data points from Impact Genome, accelerating research processes by 200% and enabling comprehensive nonprofit AI adoption analysis.",
-          "Conducted large-scale organizational research analyzing 100+ organizations, with in-depth analysis of 65+ nonprofits performing deep research into AI adoption patterns and creating evidence-based framework for technology integration in nonprofit sector.",
-        ],
-      },
-      {
-        heading: "Cross-Functional Collaboration & Teaching",
-        bullets: [
-          "Led AI capacity building initiatives for Google.org-sponsored program, designing and delivering training materials and workshops that enabled nonprofit staff to effectively use LLM tools in their workflows, reaching 250+ participants across 80+ organizations.",
-          "Automated knowledge sharing processes by building a learning log Excel system with Slack integration using Zapier AI, streamlining information flow between cross-functional teams and reducing manual documentation time by 65%.",
-        ],
-      },
-      {
-        heading: "Product Development & User Experience",
-        bullets: [
-          "Designed and managed community platform engaging 300+ members in AI education, optimizing user experience to drive adoption and engagement in nonprofit sector while implementing responsible AI practices.",
+          "Built an automated data collection system in Python that scraped 400+ data points from Impact Genome, cutting per-organization collection time from five to six minutes to under one minute, and used it to power large-scale research analyzing 100+ nonprofits' AI adoption patterns into an evidence-based technology-integration framework.",
+          "Designed the curriculum for a 6-month AI capacity-building accelerator with Rare Beauty and Google.org, recruiting and coordinating coaches and working with 20+ national and international mental health and wellness organizations to build responsible AI use policies.",
+          "Researched and mapped the programmatic models of all 20+ participating organizations to help define 6 tailored AI-adoption pathways, and managed communications for 100+ participants across biweekly working sessions with AI social impact experts.",
         ],
       },
     ],
@@ -35,13 +40,13 @@ const experience = [
     company: "We Sparkle Co.",
     location: "Minneapolis, MN",
     period: "September 2023 – January 2024",
-    accent: "#92AFD7",
+    accent: "#588157",
     sections: [
       {
         heading: "",
         bullets: [
-          "Implemented user-centric design processes using Figma prototyping and A/B testing methodologies, ensuring product features aligned with customer needs and business objectives.",
-          "Developed subscription monetization features using React and C#, enabling email subscription and platform fee contribution capabilities, collaborating with engineering teams to prioritize technical trade-offs and feature developments.",
+          "Conducted user research and A/B tests to scope subscription monetization features, using Figma prototyping to validate flows with customers before build.",
+          "Built the resulting features in React and C#, enabling email subscription and platform fee contribution capabilities, and worked with engineers to prioritize technical trade-offs across the roadmap.",
         ],
       },
     ],
@@ -51,29 +56,29 @@ const experience = [
     company: "Software for Good",
     location: "St. Paul, MN",
     period: "June 2022 – August 2022",
-    accent: "#588157",
-    sections: [
-      {
-        heading: "",
-        bullets: [
-          "Coordinated cross-functional team of 11 apprentices developing two web applications using Ruby on Rails and PostgreSQL, following agile practices.",
-          "Established standardized development processes and mentored team members in software engineering best practices, improving code quality and project delivery consistency via weekly pair-programming and code-review sessions.",
-        ],
-      },
-    ],
-  },
-  {
-    title: "Research Assistant",
-    company: "Office of Institutional Research Assessment, Carleton College",
-    location: "",
-    period: "September 2021 – May 2022",
     accent: "#A72608",
     sections: [
       {
         heading: "",
         bullets: [
-          "Built complex data aggregation systems using Python and SQL, processing 1000+ data points for executive decision-making.",
-          "Collaborated with leadership on data-centric research projects, providing analytical insights that informed students' resource allocation.",
+          "Coordinated a cross-functional team of 11 apprentices developing two web applications in Ruby on Rails and PostgreSQL, following agile practices.",
+          "Established standardized development processes and mentored team members in engineering best practices, improving code quality and delivery consistency through weekly pair-programming and code-review sessions.",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Research Assistant, Institutional Research",
+    company: "Carleton College",
+    location: "Northfield, MN",
+    period: "September 2021 – May 2022",
+    accent: "#7B5EA7",
+    sections: [
+      {
+        heading: "",
+        bullets: [
+          "Built data aggregation systems using Python and SQL, processing 1,000+ data points for executive decision-making.",
+          "Collaborated with leadership on data-centric research projects, providing analytical insights that informed student resource allocation.",
         ],
       },
     ],
@@ -82,39 +87,68 @@ const experience = [
 
 const projects = [
   {
-    title: "Project-Lead",
+    title: "Project Lead",
     subtitle: "Art Reach Cambodia (ARC)",
+    location: "Battambang, Cambodia",
     period: "June 2021 – Present",
     accent: "#F2AF29",
     bullets: [
-      "Secured $10,000+ in funding through comprehensive project proposal demonstrating alignment with global impact mission, designed digital platform architecture creating Figma wireframes, showcasing ability to build prototypes that bridge technology and social impact.",
+      "Secured $10,000+ in funding through a project proposal demonstrating alignment with global impact mission, and designed the digital platform architecture through Figma wireframes and a live site.",
     ],
   },
   {
-    title: "Interactive Data Visualization for Government Transparency",
-    subtitle: "",
+    title: "Team Member, 6-Person Team",
+    subtitle: "Government Transparency Data Visualization",
+    location: "Northfield, MN",
     period: "September 2022 – February 2023",
     accent: "#92AFD7",
     bullets: [
-      "Developed web application with 6-person interdisciplinary team analyzing US political funding sources, designing React JS interface that improved data accessibility for public users.",
+      "Developed a web application analyzing US political funding sources, designing a React interface and visualization models that made complex campaign finance data legible to public users.",
     ],
   },
   {
-    title: "Educational Assessment via Machine Learning Research",
-    subtitle: "",
+    title: "Independent Research",
+    subtitle: "Educational Assessment via Machine Learning",
+    location: "Northfield, MN",
     period: "September 2022 – January 2023",
     accent: "#588157",
     bullets: [
-      "Conducted machine learning research on Dynamic Key Value Memory Networks for K-12 educational assessment, testing models with synthetic and real datasets using Python.",
+      "Conducted machine learning research on Dynamic Key Value Memory Networks for K-12 educational assessment, testing models against synthetic and real datasets in Python.",
     ],
+  },
+];
+
+const certifications = [
+  {
+    title: "Introduction to Food and Health",
+    subtitle: "Stanford University (Coursera)",
+    period: "September 2026",
+    accent: "#F2AF29",
+  },
+  {
+    title: "Advanced Learning Algorithms",
+    subtitle: "DeepLearning.AI (Coursera)",
+    period: "September 2024",
+    accent: "#92AFD7",
+  },
+  {
+    title: "Supervised Machine Learning: Regression and Classification",
+    subtitle: "DeepLearning.AI (Coursera)",
+    period: "February 2024",
+    accent: "#588157",
   },
 ];
 
 const skills = [
   {
+    category: "AI & Data",
+    items:
+      "LLM prompting, RAG chatbots, workflow agents, applied data science (Python, SQL)",
+  },
+  {
     category: "Development Tools",
     items:
-      "Python, C#, React, Git, Azure DevOps, PostgreSQL, API Development, Software Development Lifecycle",
+      "Python, SQL, C#, React, Git, Azure DevOps, PostgreSQL, API Development, Software Development Lifecycle",
   },
   {
     category: "Collaboration Tools",
@@ -136,7 +170,7 @@ const awards = [
   },
   {
     title: "TEDx Youth Bangkok",
-    subtitle: "Selected Speaker — Topic: 'Cambodia Reimagined'",
+    subtitle: "Selected Speaker. Topic: 'Cambodia Reimagined'",
     accent: "#92AFD7",
   },
 ];
@@ -171,11 +205,12 @@ export default function Resume() {
             </div>
           </div>
           <a
-            href="/Lucklita_Theng_Resume.pdf"
-            download
+            href={RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#3D405B] text-[#F2AF29] font-bold px-6 py-3 rounded-full text-sm hover:bg-[#3D405B]/80 transition-all hover:scale-105 self-start md:self-end"
           >
-            Download PDF ↓
+            View PDF ↗
           </a>
         </div>
       </section>
@@ -186,7 +221,7 @@ export default function Resume() {
         <section>
           <SectionLabel>Professional Summary</SectionLabel>
           <p className="text-[#3D405B] leading-[1.85] max-w-3xl" style={{ fontSize: "clamp(0.95rem, 1.4vw, 1.05rem)" }}>
-            Mission-driven technologist with a Computer Science background and budding experience developing AI-integrated tools for social impact across sectors. Demonstrated proficiency in rapid prototyping and translating research into practical applications that serve underserved communities, while maintaining focus on responsible development and equitable outcomes.
+            Technologist with a Computer Science background working across AI product, programs, and partnerships for social impact. Currently consulting for iBlueprint.ai on product QA, sales, and partnerships. Previously at Project Evident, where I designed AI capacity-building programs for nonprofits and built data tools for research on nonprofit AI adoption.
           </p>
         </section>
 
@@ -209,6 +244,32 @@ export default function Resume() {
             <p className="text-[#3D405B]/50 text-sm">
               Relevant Coursework: Data Structures, Algorithms, Machine Learning, Human-Computer Interaction, Data Visualization, Software Design
             </p>
+          </div>
+        </section>
+
+        {/* ── Certifications ───────────────────────────── */}
+        <section>
+          <SectionLabel>Certifications</SectionLabel>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {certifications.map((cert, i) => (
+              <div
+                key={i}
+                className="flex items-start gap-4 p-5 rounded-2xl bg-white/50 border border-[#3D405B]/8"
+              >
+                <div
+                  className="mt-1 w-2 h-2 rounded-full shrink-0"
+                  style={{ background: cert.accent }}
+                />
+                <div>
+                  <p className="font-display font-bold text-[#1C1B18] leading-snug">
+                    {cert.title}
+                  </p>
+                  <p className="text-xs text-[#3D405B]/50 mt-1">
+                    {cert.subtitle}, {cert.period}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -259,9 +320,9 @@ export default function Resume() {
           </div>
         </section>
 
-        {/* ── Key Projects ─────────────────────────────── */}
+        {/* ── Projects & Leadership ─────────────────────── */}
         <section>
-          <SectionLabel>Key Projects</SectionLabel>
+          <SectionLabel>Projects &amp; Leadership</SectionLabel>
           <div className="space-y-10">
             {projects.map((project, i) => (
               <div key={i} className="border-l-4 pl-6 py-1" style={{ borderColor: project.accent }}>
@@ -276,6 +337,11 @@ export default function Resume() {
                 {project.subtitle && (
                   <p className="text-sm font-semibold mb-4" style={{ color: project.accent }}>
                     {project.subtitle}
+                    {project.location && (
+                      <span className="text-[#3D405B]/40 font-normal">
+                        {" "}&nbsp;·&nbsp; {project.location}
+                      </span>
+                    )}
                   </p>
                 )}
                 <ul className="space-y-2 mt-3">

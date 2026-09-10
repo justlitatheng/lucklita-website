@@ -9,43 +9,53 @@ type Category = "professional" | "personal";
 const projects = [
   {
     number: "01",
-    title: "AI Opportunity Accelerator",
-    subtitle: "Google.org",
+    title: "AI Product & Partnerships Consulting",
+    subtitle: "iBlueprint.ai",
     description:
-      "Supporting 83 nonprofits across 4 US cities in adopting AI through coaching, strategy, and capacity building. I manage a team of 10 coaches — running thought partnerships, check-ins, and progress reviews to ensure organizations are meaningfully advancing their AI implementation.",
+      "Consulting for an AI chatbot and workflow-agent platform. I run structured product QA from both individual-user and org-admin perspectives, audit the prompt library, blueprints, and knowledge-base content, and am building a repeatable QA protocol for the team. I also support investor and sales pipeline work and represent the platform in a government and social-impact tech cohort.",
     tag: "Professional" as const,
     category: "professional" as Category,
     accent: "#F2AF29",
   },
   {
     number: "02",
-    title: "Mental Health AI Accelerator",
-    subtitle: "",
+    title: "AI Opportunity Accelerator",
+    subtitle: "Google.org · Project Evident",
     description:
-      "Supporting a cohort of 21 domestic and international wellness organizations to use AI for better mental health outcomes. I own end-to-end program delivery — cohort communication, client relationships, working sessions, and coaching execution.",
+      "Supported 83 nonprofits across 4 US cities in adopting AI through coaching, strategy, and capacity building. I managed a team of 10 coaches, running thought partnerships, check-ins, and progress reviews to help organizations meaningfully advance their AI implementation.",
     tag: "Professional" as const,
     category: "professional" as Category,
     accent: "#92AFD7",
   },
   {
     number: "03",
-    title: "Tech-Enabled Scaling Research",
-    subtitle: "",
+    title: "Mental Health AI Accelerator",
+    subtitle: "Rare Beauty · Google.org · Project Evident",
     description:
-      "Researched 200+ nonprofits globally, built a database of 125+ real-world AI implementation cases, and analyzed 400+ program components to identify patterns in how nonprofits drive impact with AI.",
+      "A 6-month AI capacity-building accelerator for 20+ national and international mental health and wellness organizations. I designed the curriculum, recruited and coordinated the coaches, helped define 6 tailored AI-adoption pathways, and managed communications for 100+ participants across biweekly working sessions.",
     tag: "Professional" as const,
     category: "professional" as Category,
     accent: "#588157",
   },
   {
     number: "04",
+    title: "Tech-Enabled Scaling Research",
+    subtitle: "Project Evident",
+    description:
+      "Built a Python scraper that collected 400+ data points from Impact Genome, cutting per-organization collection time from five or six minutes to under one minute. I used it to power research into AI adoption patterns across 100+ nonprofits, which fed into an evidence-based technology-integration framework.",
+    tag: "Professional" as const,
+    category: "professional" as Category,
+    accent: "#A72608",
+  },
+  {
+    number: "05",
     title: "Art Reach Cambodia",
     subtitle: "ARC",
     description:
-      "A personal passion project that became something bigger. ARC documents the underrepresented voices of Cambodia — women in the arts, journalists, activists, athletes — through multi-modal storytelling. Funded by a $10,000 Davis Peace Project grant.",
+      "A personal passion project that became something bigger. ARC is a Khmer-led documentary storytelling project based in Battambang, made in partnership with SafeSpaceBTB, that documents the underrepresented voices of Cambodia: women in the arts, journalists, activists, and athletes. Series 1 is in post-production. Funded by grants from Davis Projects for Peace and Carleton College.",
     tag: "Personal" as const,
     category: "personal" as Category,
-    accent: "#A72608",
+    accent: "#7B5EA7",
     cta: "Visit ARC Website",
     ctaHref: "https://arc-website-olive.vercel.app",
   },
@@ -60,7 +70,7 @@ const roles = [
   {
     label: "Social Impact Founder",
     accent: "#A72608",
-    body: "Building organisations rooted in community and designed to last. Currently: Art Reach Cambodia, a project that documents underrepresented Khmer voices through storytelling and technology.",
+    body: "Building organizations rooted in community and designed to last. Currently: Art Reach Cambodia, a project that documents underrepresented Khmer voices through storytelling and technology.",
   },
   {
     label: "Optimist",
@@ -107,7 +117,7 @@ export default function Home() {
 
           <p className="text-[#3D405B]/65 leading-relaxed max-w-lg mb-10 text-base">
             At the core of who I am is a deep belief in technology as a force
-            for good — one that works best when it is human, accessible, and in
+            for good, one that works best when it is human, accessible, and in
             service of the communities that need it most. I work at the edges of
             technology, art, and social impact, building things and telling
             stories that I hope make the world a little more equitable and a lot
@@ -145,9 +155,10 @@ export default function Home() {
               I bridge worlds — technology, art, culture, and impact. I am a
               researcher, a builder, and a founder who believes the most
               interesting and important problems live at the intersection of
-              disciplines. Currently helping nonprofits navigate AI at{" "}
-              <span className="not-italic font-bold">Project Evident</span>.
-              Always working on something that I hope matters.
+              disciplines. Currently consulting on AI product and partnerships
+              for <span className="not-italic font-bold">iBlueprint.ai</span>,
+              and leading Art Reach Cambodia. Always working on something that
+              I hope matters.
             </p>
             <Link
               href="/life-story"
